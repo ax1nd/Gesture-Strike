@@ -1,0 +1,10 @@
+{
+  "name": "GestureStrike - Cyber Hand-Tracking Arcade",
+  "description": "An arcade space shooter powered by real-time computer vision and hand gesture recognition. Point to aim, pinch to shoot, and clench for nova bomb.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

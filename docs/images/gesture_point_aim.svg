@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#020617"/>
+      <stop offset="100%" stopColor="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#38bdf8"/>
+      <stop offset="100%" stopColor="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" rx="12" stroke="#1e293b" stroke-width="2"/>
+  
+  <!-- Grid Matrix Lines -->
+  <g stroke="#06b6d4" stroke-opacity="0.1" stroke-width="1">
+    <line x1="50" y1="50" x2="750" y2="50"/>
+    <line x1="50" y1="150" x2="750" y2="150"/>
+    <line x1="50" y1="250" x2="750" y2="250"/>
+    <line x1="50" y1="350" x2="750" y2="350"/>
+    <line x1="150" y1="30" x2="150" y2="420"/>
+    <line x1="300" y1="30" x2="300" y2="420"/>
+    <line x1="500" y1="30" x2="500" y2="420"/>
+    <line x1="650" y1="30" x2="650" y2="420"/>
+  </g>
+
+  <!-- Header -->
+  <text x="50" y="45" font-family="'JetBrains Mono', monospace" font-size="12" fill="#06b6d4" letter-spacing="3" font-weight="bold">GESTURE 01 // TACTICAL NAVIGATION</text>
+  <text x="50" y="78" font-family="'Orbitron', sans-serif" font-size="28" fill="#ffffff" font-weight="900" letter-spacing="1">INDEX POINT: 3D RETICLE AIMING</text>
+
+  <!-- Hand Skeleton Wireframe Graphic (Index Extended, Others Curled) -->
+  <g transform="translate(180, 240)">
+    <!-- Bones -->
+    <path d="M 0,110 L 0,40 L -30,0 L -45,-35" stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.6"/> <!-- Thumb -->
+    <path d="M 0,40 L 0,-40 L 0,-110 L 0,-150" stroke="#06b6d4" stroke-width="4.5" fill="none" filter="url(#glow)"/> <!-- Extended Index -->
+    <path d="M 0,40 L 25,0 L 25,-40 L 20,-60" stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.6"/> <!-- Middle Curled -->
+    <path d="M 0,40 L 45,10 L 45,-30 L 40,-50" stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.6"/> <!-- Ring Curled -->
+    <path d="M 0,40 L 65,20 L 65,-20 L 60,-40" stroke="#38bdf8" stroke-width="3" fill="none" opacity="0.6"/> <!-- Pinky Curled -->
+    
+    <!-- Joints -->
+    <circle cx="0" cy="110" r="7" fill="#06b6d4"/> <!-- Wrist (0) -->
+    <circle cx="0" cy="40" r="6" fill="#38bdf8"/>
+    <circle cx="0" cy="-40" r="6" fill="#38bdf8"/>
+    <circle cx="0" cy="-110" r="6" fill="#38bdf8"/>
+    <circle cx="0" cy="-150" r="10" fill="#ffffff" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/> <!-- Target Index Tip (8) -->
+
+    <text x="18" y="-146" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8" font-weight="bold">LANDMARK #8 (INDEX TIP)</text>
+    <text x="15" y="115" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">WRIST PIVOT (0,0)</text>
+  </g>
+
+  <!-- Projection Vector Beam -->
+  <path d="M 180,90 C 260,90 400,140 480,210" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6,4" fill="none"/>
+  
+  <!-- 3D Combat Reticle in Arena -->
+  <g transform="translate(540, 240)">
+    <!-- Outer Brackets -->
+    <path d="M -50,-25 L -50,-50 L -25,-50" stroke="#06b6d4" stroke-width="3" fill="none" filter="url(#glow)"/>
+    <path d="M 25,-50 L 50,-50 L 50,-25" stroke="#06b6d4" stroke-width="3" fill="none" filter="url(#glow)"/>
+    <path d="M -50,25 L -50,50 L -25,50" stroke="#06b6d4" stroke-width="3" fill="none" filter="url(#glow)"/>
+    <path d="M 25,50 L 50,50 L 50,25" stroke="#06b6d4" stroke-width="3" fill="none" filter="url(#glow)"/>
+    
+    <circle cx="0" cy="0" r="32" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8,4" fill="none"/>
+    <circle cx="0" cy="0" r="5" fill="#38bdf8" filter="url(#glow)"/>
+    
+    <!-- Coordinate Display -->
+    <text x="-60" y="80" font-family="'JetBrains Mono', monospace" font-size="12" fill="#38bdf8" font-weight="bold">WORLD POS: X [-18..+18] · Z [-2..+14]</text>
+  </g>
+
+  <!-- Attribute Breakdown Panel (Right Bottom) -->
+  <g transform="translate(430, 90)">
+    <rect x="0" y="0" width="320" height="95" rx="6" fill="#090d16" stroke="#1e293b"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8" font-weight="bold">ALGORITHM ATTRIBUTES</text>
+    <text x="16" y="45" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">• Smoothing: Exponential Moving Avg (α = 0.68)</text>
+    <text x="16" y="62" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">• Coordinate Mapping: 1 - X (Mirrored Screen)</text>
+    <text x="16" y="79" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">• Perspective: 45° Top-Down Isometric Plane</text>
+  </g>
+</svg>

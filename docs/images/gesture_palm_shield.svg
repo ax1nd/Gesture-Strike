@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#020617"/>
+      <stop offset="100%" stopColor="#0f1f38"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad3)" rx="12" stroke="#1e3a5f" stroke-width="2"/>
+  
+  <text x="50" y="45" font-family="'JetBrains Mono', monospace" font-size="12" fill="#60a5fa" letter-spacing="3" font-weight="bold">GESTURE 03 // DEFENSIVE DEFLECTION</text>
+  <text x="50" y="78" font-family="'Orbitron', sans-serif" font-size="28" fill="#ffffff" font-weight="900" letter-spacing="1">OPEN PALM: HOLOGRAPHIC DEFLECTOR</text>
+
+  <!-- Fully Extended Open Palm Hand Graphic -->
+  <g transform="translate(190, 250)">
+    <!-- 5 Extended Bones -->
+    <path d="M 0,110 L 0,40 L -40,10 L -70,-20 L -90,-50" stroke="#60a5fa" stroke-width="3.5" fill="none" filter="url(#blueGlow)"/> <!-- Thumb -->
+    <path d="M 0,40 L -25,-10 L -45,-70 L -55,-130" stroke="#60a5fa" stroke-width="3.5" fill="none" filter="url(#blueGlow)"/> <!-- Index -->
+    <path d="M 0,40 L 0,-15 L 0,-85 L 0,-150" stroke="#60a5fa" stroke-width="3.5" fill="none" filter="url(#blueGlow)"/> <!-- Middle -->
+    <path d="M 0,40 L 25,-10 L 45,-70 L 55,-130" stroke="#60a5fa" stroke-width="3.5" fill="none" filter="url(#blueGlow)"/> <!-- Ring -->
+    <path d="M 0,40 L 45,10 L 70,-20 L 90,-60" stroke="#60a5fa" stroke-width="3.5" fill="none" filter="url(#blueGlow)"/> <!-- Pinky -->
+
+    <!-- Finger Knuckle Arch -->
+    <path d="M -40,10 L -25,-10 L 0,-15 L 25,-10 L 45,10" stroke="#93c5fd" stroke-width="2" stroke-dasharray="3,3" fill="none"/>
+
+    <!-- Fingertip Joints -->
+    <circle cx="-90" cy="-50" r="5" fill="#ffffff"/>
+    <circle cx="-55" cy="-130" r="5" fill="#ffffff"/>
+    <circle cx="0" cy="-150" r="6" fill="#ffffff" filter="url(#blueGlow)"/>
+    <circle cx="55" cy="-130" r="5" fill="#ffffff"/>
+    <circle cx="90" cy="-60" r="5" fill="#ffffff"/>
+    <circle cx="0" cy="110" r="7" fill="#60a5fa"/>
+
+    <text x="-80" y="130" font-family="'JetBrains Mono', monospace" font-size="11" fill="#93c5fd">5 DIGITS FULLY EXTENDED</text>
+  </g>
+
+  <!-- Deflector Bubble & Deflection Visual -->
+  <g transform="translate(550, 240)">
+    <!-- Rotating Holographic Sphere Shell -->
+    <circle cx="0" cy="0" r="80" stroke="#3b82f6" stroke-width="3" fill="#1d4ed8" fill-opacity="0.15" filter="url(#blueGlow)"/>
+    <ellipse cx="0" cy="0" rx="80" ry="25" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="6,4" fill="none"/>
+    <ellipse cx="0" cy="0" rx="25" ry="80" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="6,4" fill="none"/>
+
+    <!-- Deflected Incoming Laser -->
+    <path d="M -130,-90 L -55,-40" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
+    <!-- Deflected Counter Laser -->
+    <path d="M -55,-40 L -90,90" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" filter="url(#blueGlow)"/>
+    <circle cx="-55" cy="-40" r="10" fill="#ffffff" filter="url(#blueGlow)"/>
+
+    <text x="-65" y="115" font-family="'JetBrains Mono', monospace" font-size="11" fill="#93c5fd" font-weight="bold">DEFLECTED: 1.5X VELOCITY</text>
+  </g>
+
+  <!-- Technical Attribute Card -->
+  <g transform="translate(420, 85)">
+    <rect x="0" y="0" width="340" height="90" rx="6" fill="#090d16" stroke="#1e3a5f"/>
+    <text x="16" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#60a5fa" font-weight="bold">SHIELD SPECIFICATIONS</text>
+    <text x="16" y="42" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">• Hand Geometry: All 5 MCP-to-Tip distances &gt; 1.35x Scale</text>
+    <text x="16" y="58" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">• Barrier Radius: 3.8 World Units (Holographic Torus)</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8">• Kinetic Conversion: Inverts enemy projectile vector with +65 Dmg</text>
+  </g>
+</svg>
